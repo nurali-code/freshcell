@@ -1,0 +1,387 @@
+@import 'normolize'
+@import 'elements'
+@import 'header'
+
+.hero
+    position: relative
+    z-index: 1
+    padding: 148px 0
+    color: white
+    overflow: hidden
+    &::before
+        content: ''
+        display: block
+        width: 100%
+        height: 100%
+        position: absolute
+        z-index: -1
+        // background-color: rgba(black, .5)
+        background: linear-gradient(90deg, rgba(0, 0, 0, .6) 0%, rgba(0, 0, 0, 0) 65%)
+
+    .col
+        max-width: 50%
+
+    &__bg
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+        z-index: -111
+        pointer-events: none
+
+    p
+        max-width: 520px
+
+    .btn
+        margin-top: 40px
+
+.lider
+    &-img
+        width: 53%
+        img
+            width: 100%
+            display: block
+
+        &__mob
+            display: none
+
+    &-title
+        width: 40.6%
+        gap: 32px
+
+    h2
+        margin: 0
+
+.main
+    text-align: center
+    h2
+        margin-bottom: 16px
+
+    &-imgs
+        max-width: 1763px
+        margin: 48px auto 0
+        & > *
+            width: 32.5%
+            object-fit: cover
+            display: block
+
+.expect
+    @media screen and ( min-width: 1023px )
+        .container
+            position: relative
+            z-index: 1
+            &::before
+                content: ''
+                display: block
+                width: 1px
+                height: 100%
+                position: absolute
+                top: 0
+                left: 50%
+                transform: translateX(-50%)
+                z-index: -1
+                background-color: #DDDDDD
+
+    .col
+        width: 40.63%
+
+    p
+        margin-bottom: 12px
+        &.sm
+            margin-bottom: 0
+            margin-top: 20px
+
+    .stack
+        margin: 32px 0 0
+
+.everyday
+    .title
+        margin-bottom: 48px
+    .col
+        max-width: 55%
+
+        &:last-child
+            width: 40.63%
+
+    .wrap
+        gap: 30px
+
+    .item
+        width: calc( 33.33% - 20px )
+        background-color: $gray-bg
+        padding: 16px 24px
+        img
+            display: block
+            width: 240px
+            height: 240px
+            object-fit: contain
+            margin: 0 auto 24px
+
+        &:nth-child(4),
+        &:last-child
+            width: calc( 50% - 15px )
+
+.liders
+    .col
+        width: 44.63%
+        &:last-child
+            width: 49.219%
+
+    h2
+        margin-bottom: 16px
+
+    p
+        margin-bottom: 12px
+        &.sm
+            margin-top: 20px
+
+    br
+        line-height: 1px !important
+        max-height: 1px
+        height: 1px !important
+        margin: 0 0 1px !important
+        display: block
+
+.winners
+    @media screen and ( min-width: 1023px )
+        position: relative
+        z-index: 1
+        overflow: hidden
+        &::before
+            content: ''
+            display: block
+            width: 70%
+            height: 100%
+            left: 50%
+            transform: translateX(-170px)
+            top: 0
+            z-index: -1
+            position: absolute
+            pointer-events: none
+            background-color: #0A3A8C
+
+    .col
+        width: 32%
+        &:last-child
+            width: 57.657%
+
+    table
+        border: none
+        th
+            background-color: $black
+
+        tr
+            &:nth-child(even)
+                background-color: #F0F5FF
+
+.faq
+    .col
+        width: 40.63%
+        max-width: 520px
+        &:last-child
+            max-width: 640px
+            width: 55%
+
+.how
+    h2
+        margin-bottom: 48px
+
+    .col
+        width: 51%
+        max-width: 630px
+        &:last-child
+            max-width: 520px
+            width: 41%
+
+    .sm 
+        a 
+            color: $prime
+
+    .wrap
+        @media screen and ( min-width: 1023px )
+            position: relative
+            z-index: 1
+            &::before
+                content: ''
+                display: block
+                width: 1px
+                height: 100%
+                position: absolute
+                top: 0
+                left: 55%
+                z-index: -1
+                background-color: #DDDDDD
+
+    .tabs
+        &-btns
+            margin-bottom: 48px
+
+        &-content
+            .h4
+                margin: 0 0 32px
+
+            .tag
+                margin-bottom: 12px
+
+            p
+                margin-bottom: 24px
+
+    &__ic
+        display: block
+        max-width: 40px
+        margin: 0 0 16px
+
+    .btn
+        margin: 24px 0
+
+@media screen and ( max-width: 1500px )
+    .hero
+        padding: 130px 0
+
+@media screen and ( max-width: 1200px )
+    .winners
+        &::before
+            transform: translateX(-100px)
+        .col
+            width: 35%
+            &:last-child
+                width: 53.657%
+
+@media screen and ( max-width: 1023px )
+    .hero
+        padding: 70px 0
+        &::before
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0) 140%)
+
+        .col
+            max-width: 470px
+
+        h1
+            font-size: 40px
+            line-height: 130%
+
+    section
+        .container
+            display: block
+
+        .col
+            width: 100% !important
+            max-width: 100% !important
+            &:first-child
+                margin-bottom: 24px
+
+    .lider
+        .container
+            max-width: 520px
+            &>*
+                width: 100%
+                max-width: 100%
+
+        &-img
+            display: none
+            &__mob
+                display: block
+
+    .main
+        &-imgs
+            flex-wrap: wrap
+            gap: 16px
+            & > *
+                width: calc( 50% - 8px )
+                &:last-child
+                    width: 100%
+
+    .expect
+        .col
+            &:first-child
+                border-bottom: 1px solid #DDDDDD
+                padding-bottom: 24px
+                margin-bottom: 24px
+
+    .everyday
+        .title
+            display: block
+            margin-bottom: 24px
+            .col
+                &:first-child
+                    margin-bottom: 16px
+
+        .item
+            width: calc( 50% - 15px )
+            &:last-child
+                width: 100%
+
+    .winners
+        padding-bottom: 0 !important
+        .container
+            padding: 0
+
+        .col
+            padding: 0 15px
+            &:first-child
+                margin-bottom: 30px
+
+            &:last-child
+                background-color: #0A3A8C
+                padding: 30px 15px 70px
+
+    .how
+        .wrap
+            display: block
+
+        .tabs
+            &-content
+                p
+                    margin-bottom: 16px
+
+                .h4
+                    margin-bottom: 24px
+
+        &__ic
+            margin-bottom: 12px
+
+        .col
+            &:last-child
+                padding-top: 24px
+                margin-top: 24px
+                border-top: 1px solid #DDDDDD
+
+@media screen and ( max-width: 720px )
+    .hero
+        padding: 60px 0
+        h1
+            font-size: 30px
+            margin-bottom: 16px
+
+        p
+            max-width: 360px
+
+        .btn
+            margin-top: 24px
+
+    .main
+        &-imgs
+            margin-top: 24px
+            gap: 8px
+            & > *
+                width: calc( 50% - 4px )
+
+    .everyday
+        .wrap
+            display: block
+
+        .item
+            width: 100% !important
+            margin-bottom: 15px
+            &:last-child
+                margin: 0
+
+    .how
+        h2
+            margin-bottom: 24px
+
+        .tabs
+            &-btns 
+                margin-bottom: 24px

@@ -1,0 +1,412 @@
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    border: none
+    outline: none
+
+:root
+    --prime: #003082
+    --white: #FFFFFF
+    --balck: #000000
+    --gray-bg: #F6F3F2
+
+$prime: var(--prime)
+$black: var(--balck)
+$white: var(--white)
+$gray-bg: var(--gray-bg)
+
+body
+    min-height: 100vh
+    font-size: 16px
+    color: $black
+    background-color: white
+    font-family: "Hyundai Sans Head Office", sans-serif
+    font-weight: 500
+    font-style: normal
+    position: relative
+    z-index: 1
+
+    &.is_active
+        overflow: hidden
+
+.container
+    max-width: 1310px
+    width: 100%
+    margin: 0 auto
+    padding: 0 15px
+
+h1, h2, h3, h4, h5, h6
+    font-weight: 500
+    margin: 0
+
+h1, .h1
+    font-size: 56px
+    line-height: 72.8px
+    margin: 0 0 24px
+
+h2, .h2
+    font-size: 48px
+    line-height: 62.4px
+    margin: 0 0 24px
+    &:last-child
+        margin-bottom: 0
+
+    i
+        font-style: normal
+        white-space: nowrap
+
+.h4, h4
+    font-size: 24px
+    line-height: 31.2px
+    margin: 0 0 24px
+
+main
+    padding-top: 90px
+    @media screen and ( max-width: 720px )
+        padding-top: 76px
+
+img
+    display: block
+    max-width: 100%
+
+a,
+button
+    color: $black
+    text-decoration: none
+    transition: all ease .3s
+    background-color: transparent
+    &:hover
+        opacity: .8
+        img
+            filter: none !important
+            opacity: 1 !important
+
+    &:active
+        opacity: 1
+        transform: scale(.98)
+
+p, ul
+    font-size: 16px
+    line-height: 24px
+    font-weight: normal
+
+.stack
+    color: $white
+    background-color: $prime
+    padding: 18px 24px 13px
+    background-repeat: no-repeat
+    background-position: center right
+    background-size: contain
+    background-image: url('../img/stack_bg.svg')
+    &__heading
+        font-size: 32px
+        line-height: 41.6px
+        margin: 0
+
+p
+    margin-bottom: 12px
+    &.md
+        font-size: 20px
+        line-height: 30px
+
+    &.sm
+        font-size: 14px
+        line-height: 21px
+        color: #828282
+
+    &:last-child
+        margin-bottom: 0 !important
+
+.pagination
+    gap: 8px
+    margin: 16px 0 0
+    a
+        display: block
+        text-align: center
+        font-weight: 500
+        font-size: 14px
+        line-height: 21px
+        width: 32px
+        height: 32px
+        background-color: $white
+        border: 1px solid #ddd
+        padding: 6px 0 0
+        img
+            width: 20px
+            height: 20px
+            margin: 0 auto
+
+        &.active
+            color: $white
+            background-color: $prime
+            border-color: $white
+
+        &.disabled
+            pointer-events: none
+            border-color: #D8D5D4
+            background-color: #D8D5D4
+            img
+                opacity: .5
+
+ul
+    font-weight: normal
+    &.check
+        li
+            margin-bottom: 12px
+            padding: 0 0 0 28px
+            background-repeat: no-repeat
+            background-size: 24px auto
+            background-position: top left
+            background-image: url('../img/check.svg')
+            &:last-child
+                margin: 0
+
+    &.disc
+        list-style-type: disc
+        padding-left: 22px
+        li
+            padding: 4px 0
+
+.ddown
+    background-color: $gray-bg
+    padding-bottom: 12px
+    margin-bottom: 12px
+    &:last-of-type
+        margin-bottom: 0
+    &-btn
+        display: block
+        width: 100%
+        text-align: left
+        font-size: 16px
+        line-height: 24px
+        padding: 20px 50px 8px 24px
+        position: relative
+        z-index: 1
+        background-color: $gray-bg
+        &::after
+            content: ''
+            display: block
+            width: 17px
+            height: 17px
+            position: absolute
+            transition: all ease .3s
+            top: 50%
+            margin-top: -2px
+            right: 16px
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: contain
+            background-image: url('../img/arr_down.svg')
+
+        &.is_active::after
+            transform: scaleY(-1)
+            margin-top: -8px
+
+    &-content
+        display: none
+        padding: 0 24px 12px
+        & > *
+            color: #333333
+            margin-bottom: 16px
+
+    &.is_active
+        .ddown
+            &-btn::after
+                transform: scaleY(-1)
+                margin-top: -8px
+
+            &-content
+                display: block
+table
+    width: 100%
+    font-size: 14px
+    line-height: 21px
+    font-weight: 400
+    border: 1px solid #dddddd
+    border-top: none
+    background-color: #fff
+
+    th, td
+        white-space: nowrap
+        padding: 9px 16px 7px
+        text-align: left
+        color: $black
+
+    th
+        background-color: $prime
+        color: $white
+        font-weight: 500
+
+    tr
+        &:nth-child(even)
+            td
+                background-color: #F6F3F2
+
+section
+    padding: 60px 0
+    overflow: hidden
+    &.bg,
+    &.bg-prime
+        margin: 60px 0
+        padding: 120px 0
+        background-color: $gray-bg
+    &.bg-prime
+        background-color: $prime
+        color: $white
+
+main
+    margin-bottom: 60px
+
+.btn
+    font-weight: 500
+    font-size: 20px
+    line-height: 26px
+    display: block
+    width: fit-content
+    padding: 17px 48px 15px
+    color: white
+    background-color: $prime
+    &:hover
+        opacity: 1
+        background-color: #144496
+
+    &:active
+        background-color: #2858AA
+
+ul
+    list-style: none
+
+.fx, .fx-w, .fx-ac, .fx-as, .fx-col, .fx-jb, .fx-ae, .hero
+    display: flex
+
+.fx-ac
+    align-items: center
+
+.fx-jc, .hero
+    justify-content: center
+
+.fx-col, .hero
+    flex-direction: column
+
+.fx
+    &-w
+        flex-wrap: wrap
+
+    &-as
+        align-items: flex-start
+
+    &-jb
+        justify-content: space-between
+
+    &-ae
+        align-items: end
+
+.tag
+    display: block
+    width: fit-content
+    font-size: 14px
+    line-height: 21px
+    padding: 4px 12px 2px
+    background-color: #D8D5D4
+
+.tabs
+    &__btn
+        width: 50%
+        text-align: center
+        border-bottom: 1px solid #DDDDDD
+        font-size: 20px
+        line-height: 26px
+        padding: 0 10px 12px
+        &.is_active
+            border-color: $prime
+            color: $prime
+
+    &-content
+        display: none
+        &.is_active
+            display: block
+            animation: fadeIn .3s ease forwards
+
+@keyframes fadeIn
+    0%
+        opacity: 0
+        transform: translateY(20px)
+    100%
+        opacity: 1
+        transform: translateY(0px)
+
+@media screen and ( max-width: 1500px )
+    h1
+        font-size: 48px
+        line-height: 62.4px
+
+@media screen and ( max-width: 1023px )
+    section
+        padding: 35px 0
+        &.bg,
+        &.bg-prime
+            margin: 35px 0
+            padding: 70px 0
+
+    p
+        &.md
+            font-size: 18px
+            line-height: 26px
+
+    main
+        margin-bottom: 35px
+
+    h2
+        font-size: 38px
+        line-height: 130%
+
+@media screen and ( max-width: 720px )
+    h2
+        font-size: 28px
+        margin-bottom: 16px
+
+    p
+        margin-bottom: 10px
+
+    section
+        padding: 25px 0
+        &.bg,
+        &.bg-prime
+            margin: 25px 0
+            padding: 50px 0
+
+    main
+        margin-bottom: 25px
+
+    .ddown
+        padding-bottom: 8px
+        &-btn
+            padding: 16px 50px 8px 16px
+            &::after
+                margin-top: -3px
+
+        &-content
+            padding: 0 16px 8px
+
+    .tabs-btns,
+    .table-scroll
+        width: 100vw
+        position: relative
+        left: -16px
+        padding: 0 16px 10px
+        overflow-x: scroll
+
+    .tabs
+        &-btns
+            padding-bottom: 0
+
+        &__btn
+            font-size: 16px
+            line-height: 21px
+            width: fit-content
+            white-space: nowrap
+
+    .h4, h4
+        font-size: 20px
+        line-height: 130%
