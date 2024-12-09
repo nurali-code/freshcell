@@ -10,6 +10,27 @@ $('.ddown-btn').on('click', function () {
 	}
 })
 
+let tableLiders = new DataTable('#tableLiders', {
+	searching: false,
+	ordering: false,
+	pageLength: 20,
+	layout: {
+		topStart: null,
+		bottomStart: null
+	},
+	entries: false
+});
+let tableWinners = new DataTable('#tableWinners', {
+	searching: false,
+	ordering: false,
+	pageLength: 5,
+	layout: {
+		topStart: null,
+		bottomStart: null
+	},
+	entries: false
+});
+
 $('[data-tab-btn]').on('click', function () {
 	var ItemName = $(this).data('tab-btn')
 	$('[data-tab-btn], [data-tab]').removeClass('is_active')
@@ -17,3 +38,9 @@ $('[data-tab-btn]').on('click', function () {
 	$('[data-tab="' + ItemName + '"]').addClass('is_active');
 	// $(this).hide()
 });
+
+
+setTimeout(() => { $('.cookies').addClass('is_active') }, 2500);
+$('.cookies .btn').on('click', function () {
+	$('.cookies').removeClass('is_active')
+})

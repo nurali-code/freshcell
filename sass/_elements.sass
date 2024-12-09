@@ -5,6 +5,9 @@
     border: none
     outline: none
 
+html
+    scroll-behavior: smooth
+
 :root
     --prime: #003082
     --white: #FFFFFF
@@ -110,45 +113,20 @@ p
         font-size: 20px
         line-height: 30px
 
-    &.sm
-        font-size: 14px
-        line-height: 21px
-        color: #828282
-
     &:last-child
         margin-bottom: 0 !important
 
-.pagination
-    gap: 8px
-    margin: 16px 0 0
-    a
-        display: block
-        text-align: center
-        font-weight: 500
-        font-size: 14px
-        line-height: 21px
-        width: 32px
-        height: 32px
-        background-color: $white
-        border: 1px solid #ddd
-        padding: 6px 0 0
-        img
-            width: 20px
-            height: 20px
-            margin: 0 auto
+.sm
+    font-weight: normal
+    font-size: 14px
+    line-height: 21px
+    color: #828282
 
-        &.active
-            color: $white
-            background-color: $prime
-            border-color: $white
-
-        &.disabled
-            pointer-events: none
-            border-color: #D8D5D4
-            background-color: #D8D5D4
-            img
-                opacity: .5
-
+a.sm
+    &:hover
+        opacity: 1
+        color: #00AAD2
+        
 ul
     font-weight: normal
     &.check
@@ -277,10 +255,10 @@ main
 ul
     list-style: none
 
-.fx, .fx-w, .fx-ac, .fx-as, .fx-col, .fx-jb, .fx-ae, .hero
+.fx, .fx-w, .fx-ac, .fx-as, .fx-col, .fx-jb, .fx-ae, .hero, .dt-paging nav
     display: flex
 
-.fx-ac
+.fx-ac, .dt-paging nav
     align-items: center
 
 .fx-jc, .hero
@@ -328,6 +306,90 @@ ul
             display: block
             animation: fadeIn .3s ease forwards
 
+input, select, textarea
+    border: 1px solid #DDDDDD
+    height: 48px
+    width: 100%
+    font-weight: normal
+    padding: 0 16px
+    background-color: $white
+    margin: 0 0 24px
+    &:focus
+        border-color: $prime
+
+textarea
+    height: unset
+    min-height: 48px
+    padding: 12px 16px
+
+.inp-wrap
+    position: relative
+    margin: 0 0 24px
+
+    label
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        padding: 0 16px
+        transform: translateY(12px)
+        line-height: 24px
+        font-size: 16px
+        font-weight: 400
+        transition: .3s ease all
+        pointer-events: none
+        i
+            font-style: normal
+            color: #DB371F
+
+    input
+        margin: 0
+        &:valid,
+        &:focus
+            & ~ label
+                font-size: 12px
+                line-height: 18px
+                transform: translateY(-8px)
+
+    &.--outline
+        input
+            background-color: rgba(0, 0, 0, 0)
+            &:valid,
+            &:focus
+                border-color: $white
+                & ~ label
+                    opacity: 0
+
+.link
+    color: $prime
+
+.cookies
+    position: fixed
+    z-index: 111
+    bottom: 20px
+    left: 0
+    padding: 0 16px
+    width: 100%
+    opacity: 0
+    visibility: hidden
+    transform: translateY(50px)
+    transition: .6s ease all
+    .container
+        max-width: 1290px
+        gap: 64px
+        box-shadow: 0px 4px 45.4px 0px #0000001F
+        padding: 24px 32px
+        background-color: $white
+
+    p
+        margin: 0
+
+    &.is_active
+        display: block
+        opacity: 1
+        visibility: visible
+        transform: translateY(0px)
+
 @keyframes fadeIn
     0%
         opacity: 0
@@ -360,6 +422,16 @@ ul
     h2
         font-size: 38px
         line-height: 130%
+
+    input, select, textarea, .inp-wrap
+        margin: 0 0 16px
+
+    .cookies
+        .container
+            display: block
+
+        p
+            margin-bottom: 24px
 
 @media screen and ( max-width: 720px )
     h2
@@ -410,3 +482,12 @@ ul
     .h4, h4
         font-size: 20px
         line-height: 130%
+
+    .cookies
+        .container
+            padding: 16px 24px
+
+        p
+            font-size: 14px
+            line-height: 21px
+            margin-bottom: 16px

@@ -4,25 +4,26 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Участвуй в конкурсе и выиграй Hyundai Tucson</title>
+    <title>Официальный конкурс Hyundai Tucson</title>
     <link rel="shortcut icon" href="favicon.svg" type="image/svg">
     <link rel="stylesheet" href="./fonts/stylesheet.css">
+    <link rel="stylesheet" href="./css/dataTables.dataTables.min.css">
     <link rel="stylesheet" href="./css/style.css">
-
+    <link rel="stylesheet" href="./css/jquery.fancybox.min.css">
 </head>
 
-<body>
+<body id="home">
     <header class="header">
         <div class="container fx-ac">
             <a href="#" class="logo"><img src="img/logo.svg" alt="i"></a>
             <button class="btn__menu"><span></span></button>
             <nav class="nav fx-ac">
-                <a class="nav__link" href="#">Домой</a>
-                <a class="nav__link" href="#">Призы</a>
-                <a class="nav__link" href="#">Лидеры</a>
-                <a class="nav__link" href="#">Победители</a>
-                <a class="nav__link" href="#">Как играть</a>
-                <a class="nav__link" href="#">Правила</a>
+                <a class="nav__link" href="#home">Домой</a>
+                <a class="nav__link" href="#prises">Призы</a>
+                <a class="nav__link" href="#liders">Лидеры</a>
+                <a class="nav__link" href="#winners">Победители</a>
+                <a class="nav__link" href="#how">Как играть</a>
+                <a class="nav__link" href="./pdf/rules.pdf" target="_blank">Правила</a>
             </nav>
         </div>
     </header>
@@ -40,7 +41,7 @@
                     Не упусти свой шанс — каждый правильный ответ приближает тебя к мечте! Присоединяйся сейчас
                     и начинай зарабатывать свои баллы
                 </p>
-                <a href="#" class="btn">Играть</a>
+                <a href="#join" class="btn">Играть</a>
             </div>
         </div>
         <img src="img/slide-1.jpg" alt="i" class="hero__bg">
@@ -69,7 +70,7 @@
                         Не упусти шанс — участвуй сейчас и покажи, на что ты способен Побеждай с Hyundai!
                     </p>
                 </div>
-                <a href="#" class="btn">Играть</a>
+                <a href="#join" class="btn">Играть</a>
                 <p class="sm">
                     Конкурс проводит ООО «Фрешсел» <br>
                     Свяжись с нами по любым вопросам <a href="mailto:vopros@igrahyundai.ru">vopros@igrahyundai.ru</a>
@@ -87,9 +88,9 @@
         </p>
 
         <div class="main-imgs fx-jb">
-            <img src="img/prise-1.jpg" alt="i" loading="lazy">
-            <img src="img/prise-2.jpg" alt="i" loading="lazy">
-            <img src="img/prise-3.jpg" alt="i" loading="lazy">
+            <a href="img/prise-1.jpg" data-fancybox="gallery"><img src="img/prise-1.jpg" alt="i" loading="lazy"></a>
+            <a href="img/prise-2.jpg" data-fancybox="gallery"><img src="img/prise-2.jpg" alt="i" loading="lazy"></a>
+            <a href="img/prise-3.jpg" data-fancybox="gallery"><img src="img/prise-3.jpg" alt="i" loading="lazy"></a>
         </div>
     </section>
 
@@ -114,17 +115,17 @@
             </div>
 
             <div class="col">
-                <p class="md">Не упустивозможность стать обладателем этого великолепного авто!</p>
+                <p class="md">Не упусти возможность стать обладателем этого великолепного авто!</p>
                 <p class="md">Участвуй сейчас и приближайся к своей мечте!</p>
-                <p class="sm">Условия участия на сайте</p>
+                <a href="./pdf/rules.pdf" target="_blank" class="sm">Условия участия на сайте</a>
                 <div class="stack">
-                    <h3 class="stack__heading">SmartStream <br> G2.0 6AT 4WD</h3>
+                    <h3 class="stack__heading">Smartstream <br> G2.0 6AT 4WD</h3>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="everyday">
+    <section class="everyday" id="prises">
         <div class="container">
             <div class="title fx-ac fx-jb">
                 <div class="col">
@@ -143,31 +144,31 @@
 
             <div class="wrap fx-w">
                 <div class="item">
-                    <img src="img/p-1.png" alt="p" loading="lazy">
+                    <a href="img/p-1-3x.png" data-fancybox="items"><img src="img/p-1.png" alt="p" loading="lazy"></a>
                     <p>
                         Кожаный брелок с матовым логотипом Hyundai. Стильный и минималистичный аксессуар
                     </p>
                 </div>
                 <div class="item">
-                    <img src="img/p-2.png" alt="p" loading="lazy">
+                    <a href="img/p-2-3x.png" data-fancybox="items"><img src="img/p-2.png" alt="p" loading="lazy"></a>
                     <p>
                         Шариковая ручка с синимичернилами фирменного голубогоцвета и логотипом Hyundai
                     </p>
                 </div>
                 <div class="item">
-                    <img src="img/p-3.png" alt="p" loading="lazy">
+                    <a href="img/p-3-3x.png" data-fancybox="items"><img src="img/p-3.png" alt="p" loading="lazy"></a>
                     <p>
                         Фирменная металлическая ручка с синим покрытием «Soft-touch» и логотипом Hyundai
                     </p>
                 </div>
                 <div class="item">
-                    <img src="img/p-4.png" alt="p" loading="lazy">
+                    <a href="img/p-4-3x.png" data-fancybox="items"><img src="img/p-4.png" alt="p" loading="lazy"></a>
                     <p>
                         Снабжен надежным приспособлением для крепления к одежде, сумке или рюкзаку
                     </p>
                 </div>
                 <div class="item">
-                    <img src="img/p-5.png" alt="p" loading="lazy">
+                    <a href="img/p-5-3x.png" data-fancybox="items"><img src="img/p-5.png" alt="p" loading="lazy"></a>
                     <p>
                         Стильные перчатки для сенсорных экранов синего цвета с логотипом Hyundai — удобный аксессуар
                         в холодное время года
@@ -177,7 +178,7 @@
         </div>
     </section>
 
-    <section class="liders">
+    <section class="liders" id="liders">
         <div class="container fx-jb">
             <div class="col">
                 <h2>Лидеры игры</h2>
@@ -185,16 +186,16 @@
                     Посмотри на ТОП-20 участников, которые набрали наибольшее количество очков
                 </p>
                 <p class="md">
-                    Не упусти свой шанс статьследующим победителем! Участвуй, копи очки и приближайся к заветному
+                    Не упусти свой шанс стать следующим победителем! Участвуй, копи очки и приближайся к заветному
                     креслу нового Hyundai Tucson
                 </p>
 
                 <p class="md">Поспеши, время ограничено!</p>
-                <p class="sm">Условия участия на сайте</p>
+                <a href="./pdf/rules.pdf" target="_blank" class="sm">Условия участия на сайте</a>
             </div>
 
             <div class="col">
-                <table>
+                <table id="tableLiders">
                     <thead>
                         <tr>
                             <th>№</th>
@@ -303,21 +304,213 @@
                             <td>Иван Иванов</td>
                             <td>+7 926 456-78-90</td>
                         </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>31</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>32</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>33</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>34</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>35</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>36</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>37</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>38</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>39</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>40</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>41</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>42</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>43</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>44</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>45</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>46</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>47</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>48</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>49</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>50</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>51</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>52</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>53</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>54</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>55</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>56</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>57</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>58</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>59</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
+                        <tr>
+                            <td>60</td>
+                            <td>Иван Иванов</td>
+                            <td>+7 926 456-78-90</td>
+                        </tr>
                     </tbody>
                 </table>
-
-                <ul class="pagination fx-ac">
-                    <li><a href="#" class="disabled"><img src="img/arr_left.svg" alt="i" loading="lazy"></a></li>
-                    <li><a href="#" class="active">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#"><img src="img/arr_rigth.svg" alt="i" loading="lazy"></a></li>
-                </ul>
             </div>
         </div>
     </section>
 
-    <section class="winners bg-prime">
+    <section class="winners bg-prime" id="winners">
         <div class="container fx-ac fx-jb">
             <div class="col">
                 <h2>Победители</h2>
@@ -327,7 +520,7 @@
 
             <div class="col">
                 <div class="table-scroll">
-                    <table>
+                    <table id="tableWinners">
                         <thead>
                             <tr>
                                 <th>№</th>
@@ -373,17 +566,79 @@
                                 <td>+7 926 456-xx-xx</td>
                                 <td>Ручка Hyundai</td>
                             </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>03.01.25</td>
+                                <td>Иванов И.И</td>
+                                <td>+7 926 456-xx-xx</td>
+                                <td>Ручка Hyundai</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>03.01.25</td>
+                                <td>Иванов И.И</td>
+                                <td>+7 926 456-xx-xx</td>
+                                <td>Ручка Hyundai</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>03.01.25</td>
+                                <td>Иванов И.И</td>
+                                <td>+7 926 456-xx-xx</td>
+                                <td>Ручка Hyundai</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>03.01.25</td>
+                                <td>Иванов И.И</td>
+                                <td>+7 926 456-xx-xx</td>
+                                <td>Ручка Hyundai</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>03.01.25</td>
+                                <td>Иванов И.И</td>
+                                <td>+7 926 456-xx-xx</td>
+                                <td>Ручка Hyundai</td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>03.01.25</td>
+                                <td>Иванов И.И</td>
+                                <td>+7 926 456-xx-xx</td>
+                                <td>Ручка Hyundai</td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>03.01.25</td>
+                                <td>Иванов И.И</td>
+                                <td>+7 926 456-xx-xx</td>
+                                <td>Ручка Hyundai</td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>03.01.25</td>
+                                <td>Иванов И.И</td>
+                                <td>+7 926 456-xx-xx</td>
+                                <td>Ручка Hyundai</td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td>03.01.25</td>
+                                <td>Иванов И.И</td>
+                                <td>+7 926 456-xx-xx</td>
+                                <td>Ручка Hyundai</td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>03.01.25</td>
+                                <td>Иванов И.И</td>
+                                <td>+7 926 456-xx-xx</td>
+                                <td>Ручка Hyundai</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
-
-                <ul class="pagination fx-ac">
-                    <li><a href="#" class="disabled"><img src="img/arr_left.svg" alt="i" loading="lazy"></a></li>
-                    <li><a href="#" class="active">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#"><img src="img/arr_rigth.svg" alt="i" loading="lazy"></a></li>
-                </ul>
             </div>
         </div>
     </section>
@@ -415,10 +670,10 @@
                             <li>Подписка на неделю: 333 рубля</li>
                             <li>Количество вопросов в день: 20</li>
                             <li>Срок проведения: до 23:59:59 ч. 31.03.2025 г.</li>
-                            <li>Больше всех балловза день: приз фирменный аксессуарHyundai</li>
+                            <li>Больше всех балловза день: приз фирменный аксессуар Hyundai</li>
                             <li>Больше всех баллов за конкурс: приз Hyundai Tucson</li>
                             <li>Кроме того, ты так же будешь собирать очки по мере игры:</li>
-                            <li>Очки за правильный ответ: 40 очкови больше</li>
+                            <li>Очки за правильный ответ: 40 очков и больше</li>
                             <li>Очки за неправильный ответ: 0 очков</li>
                         </ul>
                         <p>
@@ -546,7 +801,7 @@
         </div>
     </section>
 
-    <section class="how bg">
+    <section class="how bg" id="how">
         <div class="container">
             <h2>Как играть?</h2>
             <div class="wrap fx-ac fx-jb">
@@ -615,7 +870,7 @@
                     <p>
                         Присоединяйся и начни свое приключение уже сегодня!
                     </p>
-                    <a href="#" class="btn">Присоединиться</a>
+                    <a href="#join" class="btn">Присоединиться</a>
 
                     <p class="sm">Для отмены подписки перейди по ссылке: <a target="_blank"
                             href="https://my.cloudpayments.ru">https://my.cloudpayments.ru</a></p>
@@ -625,8 +880,39 @@
         </div>
     </section>
 
+    <section class="join bg" id="join">
+        <div class="container">
+            <div class="join-col">
+                <h2>Присоединяйся</h2>
+                <p>Присоединяйся и стань частью этого захватывающего приключения</p>
+                <form action="#">
+                    <div class="inp-wrap --outline">
+                        <input type="tel" id="tel" required>
+                        <label for="tel">Введи номер телефона <i>*</i></label>
+                    </div>
+                    <button type="submit" class="btn">Присоединиться</button>
+                </form>
+            </div>
+        </div>
+        <img src="img/slide-1.jpg" class="join__bg" alt="i" loading="lazy">
+    </section>
+
+    <!-- <div class="cookies">
+        <div class="container fx-ac">
+            <p>
+                "ООО «Фрешсел» обрабатывает cookies с целью персонализации сервисов и чтобы пользоваться веб-сайтом было
+                удобнее. Вы можете запретить обработку сookies в настройках браузера. Пожалуйста, ознакомьтесь <a
+                    class="link" href="#" target="_blank">с политикой использования cookies</a>. Читайте подробнее <a
+                    class="link" href="#" target="_blank">о правилах оказания услуг ООО «Фрешсел»</a>.
+            </p>
+            <button class="btn">Принять</button>
+        </div>
+    </div> -->
+
     <script src="./js/jquery.min.js"></script>
+    <script src="./js/dataTables.min.js"></script>
     <script src="./js/scripts.js"></script>
+    <script src="./js/jquery.fancybox.min.js"></script>
 </body>
 
 </html>
