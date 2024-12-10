@@ -44,3 +44,8 @@ setTimeout(() => { $('.cookies').addClass('is_active') }, 2500);
 $('.cookies .btn').on('click', function () {
 	$('.cookies').removeClass('is_active')
 })
+
+$(window).scroll(function () {
+	if ($(this).scrollTop() > 300) { $('.sroll_up').fadeIn(); }
+	else { $('.sroll_up').fadeOut(); }
+});

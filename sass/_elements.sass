@@ -59,6 +59,11 @@ h2, .h2
         font-style: normal
         white-space: nowrap
 
+h3,.h3
+    font-size: 32px
+    line-height: 41.6px
+    margin: 0 0 12px
+
 .h4, h4
     font-size: 24px
     line-height: 31.2px
@@ -126,7 +131,7 @@ a.sm
     &:hover
         opacity: 1
         color: #00AAD2
-        
+
 ul
     font-weight: normal
     &.check
@@ -328,16 +333,16 @@ textarea
 
     label
         position: absolute
-        left: 0
+        left: 12px
         top: 0
-        width: 100%
-        padding: 0 16px
+        padding: 0 4px
         transform: translateY(12px)
         line-height: 24px
         font-size: 16px
         font-weight: 400
         transition: .3s ease all
         pointer-events: none
+        background-color: #fff
         i
             font-style: normal
             color: #DB371F
@@ -352,6 +357,8 @@ textarea
                 transform: translateY(-8px)
 
     &.--outline
+        label
+            background-color: rgba(0, 0, 0, 0)
         input
             background-color: rgba(0, 0, 0, 0)
             &:valid,
@@ -359,6 +366,46 @@ textarea
                 border-color: $white
                 & ~ label
                     opacity: 0
+
+.inp-check
+    position: relative
+    z-index: 1
+    margin-bottom: 8px
+    &:last-of-type
+        margin-bottom: 0
+
+    label
+        display: block
+        padding: 0 0 0 24px
+        font-weight: normal
+        position: relative
+        z-index: 1
+        font-size: 12px
+        line-height: 18px
+        &::before
+            box-sizing: border-box
+            content: ''
+            display: block
+            width: 18px
+            height: 18px
+            border: 1px solid #DDDDDD
+            position: absolute
+            top: 0
+            left: 0
+            cursor: pointer
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: 14px auto
+
+    input
+        width: 18px
+        height: 18px
+        position: absolute
+        z-index: -1
+        opacity: 0
+        &:checked ~ label
+            &::before
+                background-image: url('../img/check.svg')
 
 .link
     color: $prime
@@ -389,6 +436,21 @@ textarea
         opacity: 1
         visibility: visible
         transform: translateY(0px)
+
+.sroll_up
+    z-index: 999
+    position: fixed
+    bottom: 30px
+    right: 30px
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    background-color: $prime
+    transition: none
+    background-repeat: no-repeat
+    background-position: top 16px center
+    background-size: 40% auto
+    background-image: url('../img/arr_upp.svg')
 
 @keyframes fadeIn
     0%
@@ -491,3 +553,11 @@ textarea
             font-size: 14px
             line-height: 21px
             margin-bottom: 16px
+
+    .sroll_up
+        right: 20px
+        bottom: 20px
+
+    h3, .h3
+        font-size: 22px
+        line-height: 130%
