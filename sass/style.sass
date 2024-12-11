@@ -21,7 +21,7 @@
         background: linear-gradient(90deg, rgba(0, 0, 0, .6) 0%, rgba(0, 0, 0, 0) 65%)
 
 .hero
-    padding: 148px 0
+    padding: 148px 0 200px
     .col
         max-width: 50%
 
@@ -40,6 +40,42 @@
 
     .btn
         margin-top: 40px
+
+.countdown
+    background-color: rgba(0, 0, 0, .5)
+    backdrop-filter: blur(8px)
+    padding: 18px 0 17px
+    @media screen and ( min-width: 720px )
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        z-index: 99
+
+    .container
+        & > *
+            margin: 0
+
+    #countdown
+        text-align: center
+        gap: 24px
+        font-weight: normal
+        color: #DDDDDD
+
+        span span, 
+        i
+            font-weight: 500
+            display: block
+            font-size: 48px
+            line-height: 120%
+            font-style: normal
+            color: $white
+
+        span
+            span
+                display: block
+                width: 100%
+                line-height: 94%
 
 .lider
     &-img
@@ -312,7 +348,7 @@
 
 @media screen and ( max-width: 1500px )
     .hero
-        padding: 130px 0
+        padding: 130px 0 150px
 
 @media screen and ( max-width: 1200px )
     .winners
@@ -325,7 +361,7 @@
 
 @media screen and ( max-width: 1023px )
     .hero
-        padding: 70px 0
+        padding: 70px 0 130px
         &::before
             background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0) 140%)
 
@@ -335,6 +371,30 @@
         h1
             font-size: 40px
             line-height: 130%
+
+    .countdown
+        margin-top: 40px
+        padding: 14px 0
+        .container
+            text-align: center
+            display: block
+
+        h3
+            font-size: 20px
+
+        #countdown
+            font-size: 12px
+            max-width: 310px
+            margin: 6px auto 0
+            gap: 0
+            span span, 
+            i
+                font-size: 32px
+
+        span,
+        i
+            display: block
+            margin: 0 auto
 
     section
         .container
@@ -430,16 +490,15 @@
         p
             margin-bottom: 24px
 
-    .access 
+    .access
         .wrap
             display: block
 
-        .col 
-
+        .col
 
 @media screen and ( max-width: 720px )
     .hero
-        padding: 60px 0
+        padding: 60px 0 0
         h1
             font-size: 30px
             margin-bottom: 16px
@@ -475,6 +534,6 @@
             &-btns
                 margin-bottom: 24px
 
-    .access 
-        .col 
+    .access
+        .col
             padding: 24px 16px

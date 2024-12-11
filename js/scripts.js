@@ -2,12 +2,58 @@ $('.btn__menu, .nav__link').on('click', function () {
 	window.innerWidth <= 1200 ? $('.btn__menu, .nav, body').toggleClass('is_active') : false;
 })
 
-$('.ddown-btn').on('click', function () {
-	$(this).toggleClass('is_active').next().slideToggle(250);
-	if ($(this).closest('.ddown').hasClass('is_active')) {
-		$(this).removeClass('is_active');
-		setTimeout(() => { $(this).closest('.ddown').removeClass('is_active'); }, 250);
+$(document).ready(function () {
+	// Укажите дату и время окончания
+	var countdownDate = new Date("2025-01-01T00:00:00").getTime();
+
+	function updateCountdown() {
+		var now = new Date().getTime();
+		var distance = countdownDate - now;
+
+		if (distance <= 0) {
+			// Остановить таймер, если время истекло
+			clearInterval(timer);
+			$("#countdown").html("<span>Конкурс Начался!</span>");
+			return;
+		}
+
+		// Вычисляем дни, часы, минуты и секунды
+		var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+		// Обновляем значения на странице
+		$("#days").text(days.toString().padStart(2, "0"));
+		$("#hours").text(hours.toString().padStart(2, "0"));
+		$("#minutes").text(minutes.toString().padStart(2, "0"));
+		$("#seconds").text(seconds.toString().padStart(2, "0"));
 	}
+
+	// Запускаем таймер с обновлением каждую секунду
+	var timer = setInterval(updateCountdown, 1000);
+	updateCountdown(); // Запускаем сразу, чтобы не ждать первую секунду
+});
+
+
+$('.ddown-btn').on('click', function () {
+	if ($(this).hasClass('is_active')) {
+		$(this).removeClass('is_active')
+		$(this).next().slideUp(250);
+	} else {
+		$(this).addClass('is_active').next().slideDown(250);
+		$('.ddown-btn').not(this).removeClass('is_active')
+		$('.ddown-content').not($(this).next()).slideUp(250);
+	}
+})
+
+
+$('#inpCard').inputmask({ "mask": "9999-9999-9999-9999" });
+$('#inpDate').inputmask({ "mask": "99/99" });
+$('#inpCvv').inputmask({ "mask": "999" });
+$('input[type="tel"]').inputmask({ "mask": "+7-999-999-99-99" });
+$('input[type="tel"]').on('click', function () {
+	$(this).setCursorPosition(4);
 })
 
 let tableLiders = new DataTable('#tableLiders', {
