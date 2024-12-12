@@ -49,10 +49,11 @@ $('.ddown-btn').on('click', function () {
 
 
 $('#inpCard').inputmask({ "mask": "9999-9999-9999-9999" });
+$('#phoneCode').inputmask({ "mask": "9-9-9-9" });
 $('#inpDate').inputmask({ "mask": "99/99" });
 $('#inpCvv').inputmask({ "mask": "999" });
-$('input[type="tel"]').inputmask({ "mask": "+7-999-999-99-99" });
-$('input[type="tel"]').on('click', function () {
+$('#tel').inputmask({ "mask": "+7-999-999-99-99" });
+$('#tel').on('click', function () {
 	$(this).setCursorPosition(4);
 })
 
