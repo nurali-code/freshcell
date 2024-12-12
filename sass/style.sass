@@ -345,12 +345,14 @@
     .group > *
         margin: 0
         width: calc( 50% - 6px )
+
 .quiz
     .col
         max-width: 850px
 
     &-text
-        max-width: 550px
+        text-transform: uppercase
+        max-width: 650px
         margin-bottom: 24px
         p
             margin-bottom: 12px
@@ -358,11 +360,41 @@
     &-item
         padding: 48px 0
         border-top: 1px solid #DDDDDD
+        h5 
+            margin-bottom: 24px
 
     &-head
         margin: 0 0 16px
         &>*
             margin: 0
+
+    &__img 
+        display: block
+        width: 100%
+        margin: 0 0 32px
+        aspect-ratio: 16/7.53
+        object-fit: cover
+
+    .false,
+    .true
+        margin: 48px 0 0
+        background-color: #DB371F
+        color: white
+        padding: 6.5px 10px 6.5px 50px
+        background-repeat: no-repeat
+        background-position: center left 12px
+        background-image: url('../img/close.svg')
+
+    .true
+        background-color: #34C759
+        background-image: url('../img/check-w.svg')
+
+
+    .answer
+        margin: 12px 0 0
+        color: #333333
+        font-size: 20px
+        line-height: 30px
 
 @media screen and ( max-width: 1500px )
     .hero
@@ -555,3 +587,24 @@
     .access
         .col
             padding: 24px 16px
+
+    .quiz
+        &-item 
+            padding: 32px 0
+            h5 
+                margin-bottom: 16px
+
+        &-head 
+            display: block
+
+        &__img 
+            margin-bottom: 24px 
+
+        .answer
+            font-size: 18px
+            line-height: 125%
+
+        .true,
+        .false
+            margin-top: 32px
+        
