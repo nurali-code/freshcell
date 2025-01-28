@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Официальный конкурс Hyundai Tucson</title>
+    <link rel="shortcut icon" href="favicon.svg" type="image/svg">
+    <link rel="stylesheet" href="./fonts/stylesheet.css">
+    <link rel="stylesheet" href="./css/dataTables.dataTables.min.css">
+    <link rel="stylesheet" href="./css/style.css?ver-13">
+    <link rel="stylesheet" href="./css/jquery.fancybox.min.css">
+</head>
+
+<body id="home">
+    <header class="header">
+        <div class="container fx-ac">
+            <a href="#" class="logo"><img src="img/logo.svg" alt="i"></a>
+            <button class="btn__menu"><span></span></button>
+            <nav class="nav fx-ac">
+                <a class="nav__link" href="#home">Домой</a>
+                <a class="nav__link" href="#prises">Призы</a>
+                <a class="nav__link" href="#liders">Лидеры</a>
+                <a class="nav__link" href="#winners">Победители</a>
+                <a class="nav__link" href="#how">Как играть</a>
+                <a class="nav__link" href="./pdf/rules.pdf" target="_blank">Правила</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="access">
+        <div class="container">
+            <h2>Получите доступ к конкурсу</h2>
+            <div class="wrap fx-jb">
+                <div class="col fx-col">
+                    <h3>Оплатить через СБП</h3>
+                    <span class="tag">Стоимость: 1 ₽ первые 2 дня, далее 333 ₽ в неделю</span>
+                    <img class="access__qr" src="img/qr.jpg" alt="i" loading="lazy">
+                    <p>
+                        Отсканируй QR-код камерой телефона, перейди по ссылке в приложение банка, введи сумму 1 ₽ —
+                        это небольшая плата, которая позволит тебе создать игровой аккаунт, выбери карту или счёт
+                        для списания средств, поставь галочку напротив пункта «Автоматический платеж» и произведи
+                        оплату, либо оплати пластиковой картой
+                    </p>
+                    <div class="inp-check">
+                        <input type="checkbox" required name="checkbox" id="policy1">
+                        <label for="policy1">
+                            Согласен с <a href="./pdf/privacy.pdf" class="link" target="_blank">правилами обработки
+                                персональных данных</a>, <a href="./pdf/rules.pdf" target="_blank"
+                                class="link">правилами пользования сервисом</a>
+                            и получением чеков на внутреннюю почту сервиса. Платежи автоматические реккурентные
+                        </label>
+                    </div>
+                    <div class="inp-check">
+                        <input type="checkbox" required name="checkbox" id="policy2">
+                        <label for="policy2">
+                            Согласен на автоматическую оплату 333 рублей каждые 7 дней по истечению пробного периода
+                            в 2 дня. Возможно частичное списание 44 рубля за 1 день доступа, согласно тарифам
+                            (Правила конкурса)
+                        </label>
+                    </div>
+
+                    <div class="access-logos fx-ac">
+                        <img src="img/sbp.png" alt="i" loading="lazy">
+                    </div>
+                </div>
+                <div class="col fx-col">
+                    <h3>Оплатить Мир, Mastercard, Visa</h3>
+                    <div class="tag">Стоимость: 1 ₽ первые 2 дня, далее 333 ₽ в неделю</div>
+
+                    <h5>Конкурс “Hyundai Tucson”</h5>
+                    <h3>1,00 ₽</h3>
+
+                    <form>
+                        <div class="inp-wrap">
+                            <input type="tel" id="inpCard" required>
+                            <label for="inpCard">Номер карты <i>*</i></label>
+                        </div>
+                        <div class="group fx-jb">
+                            <div class="inp-wrap">
+                                <input type="tel" id="inpDate" required>
+                                <label for="inpDate">ММ / ГГ <i>*</i></label>
+                            </div>
+                            <div class="inp-wrap">
+                                <input type="tel" id="inpCvv" required>
+                                <label for="inpCvv">CVV <i>*</i></label>
+                            </div>
+                        </div>
+                        <button class="btn" type="submit">Оплатить 1, 00 ₽</button>
+
+                        <div class="inp-check">
+                            <input type="checkbox" required name="checkbox" id="policy3">
+                            <label for="policy3">
+                                Согласен с <a href="./pdf/privacy.pdf" class="link" target="_blank">правилами обработки
+                                    персональных данных</a>, <a href="./pdf/rules.pdf" target="_blank" class="link"></a>
+                                и получением чеков на внутреннюю почту сервиса. Платежи автоматические реккурентные
+                            </label>
+                        </div>
+                        <div class="inp-check">
+                            <input type="checkbox" required name="checkbox" id="policy4">
+                            <label for="policy4">
+                                Согласен на автоматическую оплату 333 рублей каждые 7 дней по истечению пробного периода
+                                в 2 дня. Возможно частичное списание 44 рубля за 1 день доступа, согласно тарифам
+                                (<a href="./pdf/rules.pdf" class="link">Правила конкурса</a> )
+                            </label>
+                        </div>
+                    </form>
+
+                    <div class="access-logos fx-ac">
+                        <img src="img/visa.svg" alt="i" loading="lazy">
+                        <img src="img/master.svg" alt="i" loading="lazy">
+                        <img src="img/mir.svg" alt="i" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <a href="#home" class="sroll_up"></a>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/dataTables.min.js"></script>
+    <script src="./js/jquery.inputmask.min.js"></script>
+    <script src="./js/scripts.js?ver-13"></script>
+    <script src="./js/jquery.fancybox.min.js"></script>
+</body>
+
+</html>
